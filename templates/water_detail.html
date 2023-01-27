@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+    <h2> {{water.name}} </h2>
+    <p>Description: {{ water.description }}</p>
+    <p>PH Level: {{ water.ph_level }}</p>
+    <p>Electrolyte: {{ water.electrolyte }}</p>
+    <p>Cost: {{ water.cost }}</p>
+    <a href="{% url 'water_update' water.pk %}">+Update</a>
+    <a href="{% url 'water_delete' water.pk %}">+Delete</a>
+  </div>
+{% endblock content %}

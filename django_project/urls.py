@@ -6,11 +6,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path("", include("pages.urls")),
+    path("soak-city/", include("soak_city.urls")),
 ]
-
-if settings.DEBUG:
-    import debug_toolbar
-
-    urlpatterns = [
-        path("__debug__/", include(debug_toolbar.urls)),
-    ] + urlpatterns
